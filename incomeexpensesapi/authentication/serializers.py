@@ -19,6 +19,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('The username should only contain alphanumeric characters')
         return attrs
 
+    """
+            Create and return a new `User` instance, given the validated data.
+    """
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
 

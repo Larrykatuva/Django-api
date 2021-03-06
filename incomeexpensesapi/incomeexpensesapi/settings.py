@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'authentication',
     'drf_yasg',
     'expenses',
+    'income',
 ]
 
 SWAGGER_SETTINGS = {
@@ -92,11 +93,11 @@ WSGI_APPLICATION = 'incomeexpensesapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'api_authentication',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost'
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'django-api',
+            'USER': 'postgres',
+            'PASSWORD': '1234',
+            'HOST': 'localhost',
     }
 }
 
